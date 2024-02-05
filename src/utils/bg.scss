@@ -1,0 +1,7 @@
+@use '../abstract/values' as *;
+
+@each $option, $value in map-get($values, 'bg') {
+  .bg-#{$option} {
+    background-color: $value;
+  }
+}

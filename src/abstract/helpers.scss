@@ -1,0 +1,37 @@
+$helpers: (
+  'bg': (
+    'primary' (216, 98%, 52%), 
+    'secondary' (208, 7%, 46%), 
+    'success' (152, 69%, 31%), 
+    'danger'(354, 70%, 54%), 
+    'warning' (45, 100%, 51%), 
+    'info' (190, 90%, 50%),
+    'light' (0, 100%, 100%), 
+    'dark' (0, 100%, 0%)
+  ),
+  'bg-gradients': (
+    'primary' linear-gradient(180deg,
+     hsl(216, 98%, 52%), transparent), 
+    'secondary' linear-gradient(180deg,
+     hsl(208, 7%, 46%), transparent), 
+    'success' linear-gradient(180deg,
+     hsl(152, 69%, 31%), transparent), 
+    'danger'linear-gradient(180deg,
+     hsl(354, 70%, 54%), transparent), 
+    'warning' linear-gradient(180deg,
+     hsl(45, 100%, 51%), transparent), 
+    'info' linear-gradient(180deg,
+     hsl(190, 90%, 50%), transparent),
+    'light' linear-gradient(180deg,
+     hsl(0, 100%, 100%), transparent), 
+    'dark' linear-gradient(180deg,
+     hsl(0, 100%, 0%), transparent)
+  ),
+  'bg-opacity': (
+    '0': 0,
+    '25': .25,
+    '50': .5,
+    '75': .75,
+    '1': 1
+  )
+);

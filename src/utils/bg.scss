@@ -1,7 +1,22 @@
-@use '../abstract/values' as *;
+@use '../abstract/helpers' as *;
 
-@each $option, $value in map-get($values, 'bg') {
+@each $option, $value in map-get($helpers, 'bg') {
   .bg-#{$option} {
-    background-color: $value;
+    --bg-opacity: 1;
+    background-color: hsl($value, var(--bg-opacity));
+  }
+}
+ 
+@each $option, $value in map-get($helpers, 'bg-gradients') {
+  .bg-#{$option}.bg-gradient {
+    background-color: transparent;
+    background-image: $value;
+  }
+}
+
+@each $option, $value in map-get($helpers, 'bg-opacity') { 
+  .bg.bg-opacity-#{$option},
+  .bg.bg-gradient-#{$option} {
+    --bg-opacity: #{$value};
   }
 }

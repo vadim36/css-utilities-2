@@ -1,0 +1,31 @@
+@use '../abstract/helpers' as *;
+
+.bordered {
+  border: map-get($helpers, 'bordered');
+}
+
+@each $option, $value in map-get($helpers, 'border', 'colored') {
+  .border-#{$option} {
+    --border-opacity: 1;
+    border: 1px solid hsl($value, var(--border-opacity));
+  }
+}
+
+@each $option, $value in map-get($helpers, 'border', 'opacity') {
+  .border-#{$option} {
+    --border-opacity: #{$value};
+  }
+}
+
+@each $option, $value in map-get($helpers, 'border', 'width') {
+  .border-#{$option} {
+    --border-opacity: 1;
+    border: $value solid hsl(var(--dark-color), var(--border-opacity));
+  }
+}
+
+@each $option, $value in map-get($helpers, 'border', 'radius') {
+  .br-#{$option} {
+    border-radius: calc(#{$value} * 100%);
+  }
+}

@@ -1,13 +1,24 @@
+:root {
+  --primary-color: 216, 98%, 52%;
+  --secondary-color: 208, 7%, 46%;
+  --success-color: 152, 69%, 31%;
+  --danger-color: 354, 70%, 54%;
+  --warning-color: 45, 100%, 51%;
+  --info-color: 190, 90%, 50%;
+  --light-color: 0, 100%, 100%;
+  --dark-color: 0, 100%, 0%;
+}
+
 $helpers: (
   'bg': (
-    'primary' (216, 98%, 52%), 
-    'secondary' (208, 7%, 46%), 
-    'success' (152, 69%, 31%), 
-    'danger'(354, 70%, 54%), 
-    'warning' (45, 100%, 51%), 
-    'info' (190, 90%, 50%),
-    'light' (0, 100%, 100%), 
-    'dark' (0, 100%, 0%)
+    'primary' var(--primary-color), 
+    'secondary' var(--secondary-color), 
+    'success' var(--success-color), 
+    'danger' var(--danger-color), 
+    'warning' var(--warning-color), 
+    'info' var(--info-color),
+    'light' var(--light-color), 
+    'dark' var(--dark-color)
   ),
   'bg-gradients': (
     'primary' linear-gradient(180deg,
@@ -33,5 +44,41 @@ $helpers: (
     '50': .5,
     '75': .75,
     '1': 1
+  ),
+  'bordered': (
+    1px solid hsl(var(--dark-color))
+  ),
+  'border': (
+    'colored': (
+      'primary' var(--primary-color), 
+      'secondary' var(--secondary-color), 
+      'success' var(--success-color), 
+      'danger' var(--danger-color), 
+      'warning' var(--warning-color), 
+      'info' var(--info-color),
+      'light' var(--light-color), 
+      'dark' var(--dark-color)
+    ),
+    'opacity': (
+      '0': 0,
+      '25': .25,
+      '50': .5,
+      '75': .75,
+      '1': 1
+    ),
+    'width': (
+      '1': 1px,
+      '2': 2px,
+      '3': 3px,
+      '4': 4px,
+      '5': 5px
+    ),
+    'radius': (
+      '0': 0,
+      '25': .25,
+      '50': .5,
+      '75': .75,
+      '1': 1
+    )
   )
 );

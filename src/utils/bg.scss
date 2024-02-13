@@ -15,8 +15,7 @@
 }
 
 @each $option, $value in map-get($helpers, 'bg-opacity') { 
-  .bg.bg-opacity-#{$option},
-  .bg.bg-gradient-#{$option} {
+  [class^="bg-"].bg-opacity-#{$option} {
     --bg-opacity: #{$value};
   }
 }
